@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Versatile.Shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <% if(err.length > 0) {%>
+        <div class="text-2xl text-red-600">
+            <%=err%>
+        </div>
+        <%}%>
+    <div>err</div>
+      <div class=" h-screen w-full">
+        <div class="logo">Versatile</div>
+        <div class="middle flex  w-full h-[80%] mt-5 justify-around">
+            <div class="register  flex justify-center items-center flex-col">
+                <div>welcome to Versatile</div>
+                <div>create your account</div>
+                <form action="/users/register" method="post" class="flex flex-col gap-5">
+                    <input type="text" placeholder="fullname" name="fullname">
+                    <input type="email" placeholder="email" name="email">
+                    <input type="password" placeholder="password" name="password">
+                    <input type="submit">
+                </form>
+            </div>
+            <div class="login flex justify-center items-center flex-col">
+                <div>Login your account</div>
+                <form action="/users/login" method="post" class="flex flex-col gap-5">
+                    <input type="email" placeholder="email" name="email">
+                    <input type="password" placeholder="password" name="password">
+                    <input type="submit" value="Login">
+                </form>
+            </div>
+        </div>
+      </div>
+</body>
+</html>
